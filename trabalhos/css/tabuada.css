@@ -32,4 +32,7 @@ button:hover{
     .tabuada> label, .tabuada> input, .tabuada>button{
         display: block;
     }
+    .tabuada{
+        padding: 30px;
+    }
 }

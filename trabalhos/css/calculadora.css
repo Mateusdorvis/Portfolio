@@ -98,4 +98,8 @@ button:active {
     button{
         font-size: 0.7rem;
     }
+    .divmain{
+        padding-bottom: 50px;
+    }
+
 }
