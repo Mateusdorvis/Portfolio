@@ -53,14 +53,6 @@ h1 {
     transition: .1s;
 }
 
-.infor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.infor img {
-    max-width: 100px;
-}
 
 /*conteudo*/
 .box-projects {
