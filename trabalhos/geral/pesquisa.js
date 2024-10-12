@@ -1,5 +1,5 @@
 let links = [
-    '../index.html',
+    'https://mateusdorvis.github.io/Portfolio/',
     'parallax.html',
     'flex_grid.html',
     'carrossel.html',
