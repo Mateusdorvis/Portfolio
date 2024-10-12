@@ -1,0 +1,286 @@
+@import url('https://fonts.cdnfonts.com/css/bingkisan');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-size: cover;
+}
+
+/*geral*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    max-width: 100vw;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*menu*/
+.menu>div {
+    width: 50px;
+    margin: 5px;
+    height: 5px;
+    background-color: rgb(164, 0, 230);
+}
+
+
+.menu-lateral {
+    position: fixed;
+    z-index: 1000;
+}
+
+.lateral {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.navegacao {
+    opacity: 0;
+    transition: .1s;
+}
+
+.infor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.infor img {
+    max-width: 100px;
+}
+
+/*conteudo*/
+.box-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px;
+    height: auto;
+}
+
+#python {
+    border-radius: 100%;
+}
+
+.content {
+    margin: 30% auto;
+    bottom: 90px;
+    max-width: 1120px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 6%;
+}
+
+
+.card-box{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 80px;
+    
+}
+.projetos1 {
+    opacity: 0;
+}
+
+/*footer style*/
+footer {
+    border: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #04394e;
+    z-index: 1;
+    color: white;
+}
+
+footer form>input,
+footer form>h1,
+footer form>label {
+    display: block;
+    margin: 10px;
+
+}
+input, textarea{
+    border-radius: 10px;
+    padding: 10px;
+}
+input{
+    width: 200px;
+    height: 40px;
+}
+input[type="submit"]{
+    background-color: rgb(31, 31, 31);
+    border: 0px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    transition: .3s;
+    
+}
+input[type="submit"]:hover{
+    background-color: #0a6789;
+}
+footer form {
+    padding: 12px;
+}
+
+footer h1 {
+    text-align: justify;
+}
+
+textarea {
+    max-width: 500px;
+}
+
+.x {
+    color: white;
+    margin: 3px;
+}
+.contato {
+    background-color: #222222 ;
+    padding: 30px;
+}
+.redes_sociais, .filho2>div{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+}
+#logo {
+    font-size: 30px;
+    font-family: 'Bingkisan free', sans-serif;
+}
+/*dark-mode*/
+.dark-mode{
+    max-width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: red;
+}
+.dark-mode > div{
+    max-width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 100%;
+}
+.fa-moon{
+    margin: 20px;
+}
+/*javascript */
+.menu_style {
+    background-color: #f1831c;
+    color: white;
+    transition: .5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    border-radius: 0%;
+}
+
+.off {
+    opacity: 0;
+    transition: .7s;
+}
+
+.on {
+    opacity: 1;
+    transition: .7s;
+}
+.body{
+    background-color:  #121212;
+    color: white;
+}
+/*card*/
+.card{
+    perspective: 1000px;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+
+    
+}
+.figura{
+    transform-style: preserve-3d;
+    transition: transform .8s;
+    position: relative;
+    
+}
+.card-frente, .card-info{
+    backface-visibility: hidden;
+    position: absolute;
+    
+}
+.card-frente{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.473) ;
+    background-blend-mode: saturation;
+    color: white;
+    background-attachment: fixed;
+    background-position: center center;
+   
+}
+.card-frente h1{
+    margin: 50% auto;
+}
+.card-info span{
+    font-style: italic;
+}
+.card-info{
+    background-color: rgb(236, 95, 0);
+    transform: rotateY(180deg);
+    color: white;
+    padding: 40px;
+    
+}
+
+/*efeito de quando o user clica gira o card  */
+.card.girar .figura{
+    transform: rotateY(180deg);
+}
+@media  screen and (min-width: 320px) and (max-width: 767px) {
+   
+    .card-box, .box-projects {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .projetos{
+        opacity: 1;
+    }
+    
+    .card-box img {
+        width: 100%; /* As imagens ocupam a largura total do card */
+    }
+}
+@media  screen and (min-width: 768px)  and (max-width:1024px) {
+    .card-box, .box-projects {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+    }
+    .projetos{
+        opacity: 1;
+    }
+    .card-box img {
+        width: 100%; /* As imagens ocupam a largura total do card */
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="geral/menu-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+</head>
+
+<body>
+    <header class="menu-lateral">
+        <aside class="lateral">
+            <div class="menu" id="menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="navegacao" id="navegacao">
+                <div>
+                    <p>Consulte outras páginas também :</p>
+                    <input type="search" name="site" id="site">
+
+                    <ol id="lista">
+                        
+                        
+                    </ol>
+                </div>
+                <div class="dark-mode" id="dark">
+                    <div id="filho-dark"><i class="fa-solid fa-moon fa-2xl" id="lua"></i></div>
+                </div>
+            </nav>
+        </aside>
+    </header>
+    <h1>Parallax</h1>
+    <main class="container">
+        <section class="card-box bgimage1" >
+            <div>
+                <h1>A natureza é linda e devemos cuidar dela !</h1>
+                <p>Cuidar da natureza é essencial para garantir a saúde do nosso planeta e o bem-estar das futuras gerações. A preservação dos ecossistemas naturais ajuda a manter o equilíbrio ambiental, protege a biodiversidade e assegura recursos vitais como água limpa e ar puro. 
+
+                    A beleza da natureza é inegável. Desde as vastas florestas e majestosas montanhas até os oceanos cristalinos e coloridos campos de flores, cada elemento natural nos oferece paisagens deslumbrantes e momentos de paz e reflexão. 
+                    
+                    Proteger a natureza não é apenas uma responsabilidade, mas também uma forma de apreciar e valorizar a incrível diversidade e beleza que ela nos proporciona.</p>
+            </div>
+        </section>
+        <section class="card-box bgimage2">
+            <div>
+              <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage3">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage4">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage5">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage6">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage7">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage8">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="card-box bgimage9">
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+    </main>
+    <script src="geral/menu.js"></script>
+    <script src="js_pages/parallax.js"></script>
+    <script src="geral/pesquisa.js"></script>
+     
+    <footer>
+        <form action="">
+            <h1>Formulário de contato : </h1>
+            <label for="email">Digite seu e-mail :</label>
+            <input type="email" name="email" id="email">
+            <label for="texto">Digite seu texto :</label>
+            <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar">
+        </form>
+        
+        <section class="contato">
+            <div class="filho">
+                <h1 id="logo">Mateus</h1>
+                <p>Página  desenvolvida por Mateus Dorvis&reg;&copy;</p>
+                <div class="redes_sociais">
+                    <a href=""><i class="fa-brands fa-linkedin x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-square-github x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram x fa-2xl"></i></a>
+                    <a href="https://wa.me/5551981960014?text=Olá%2C%20gostaria%20de%20mais%20informações%21" target="_blank"><i class="fa-brands fa-whatsapp x fa-2xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="filho2">
+                <p>Compartilhar página via: </p>
+                <div>
+                    <a class="compartilhar" id="share">
+                        <i class="fa-solid fa-share x fa-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com" target="_blank">
+                        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Compartilhar no Facebook" style="width:40px;height:40px;">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Confira este site incrível: https://seusite.com" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Compartilhar no WhatsApp" style="width:40px;height:40px;">
+                    </a>
+                    <a id="copyButton" href="#"><i class="fa-regular fa-copy x fa-2xl"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById('copyButton').onclick = function(event) {
+            event.preventDefault(); // Impede a ação padrão do link
+
+            // Cria um campo de texto temporário
+            const input = document.createElement('input');
+            input.value = window.location.href; // Define o valor como o link da página
+            document.body.appendChild(input); // Adiciona o campo ao DOM
+
+            // Seleciona o texto do campo
+            input.select();
+            input.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+            // Copia o texto selecionado para a área de transferência
+            document.execCommand('copy');
+
+            // Remove o campo do DOM
+            document.body.removeChild(input);
+
+            // Alerta o usuário
+            alert('Link copiado para a área de transferência: ' + input.value);
+        };
+    </script>
+</body>
+
+</html>

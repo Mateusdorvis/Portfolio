@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signo.css">
+    <link rel="stylesheet" href="geral/menu-footer.css">
+    <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Signos</title>
+</head>
+
+<body>
+
+    <header class="menu-lateral">
+        <aside class="lateral">
+            <div class="menu" id="menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="navegacao" id="navegacao">
+                <div>
+                    <p>Consulte outras páginas também :</p>
+                    <input type="search" name="site" id="site">
+
+                    <ol id="lista">
+                        
+                        
+                    </ol>
+                </div>
+                <div class="dark-mode" id="dark">
+                    <div id="filho-dark"><i class="fa-solid fa-moon fa-2xl" id="lua"></i></div>
+                </div>
+            </nav>
+        </aside>
+    </header>
+    <main>
+
+        <h1>Signos</h1>
+        <label for="signo">Escolha um signo</label>
+        <select name="signo" id="signo">
+            <option value="aries">Áries</option>
+            <option value="aquario">Áquário</option>
+            <option value="peixes">Peixes</option>
+            <option value="leao">Leão</option>
+            <option value="virgem">Virgem</option>
+            <option value="cancer">Câncer</option>
+            <option value="capricornio">Capricórnio</option>
+            <option value="sagitario">Sagitário</option>
+            <option value="escorpiao">Escorpião</option>
+            <option value="gemeos">Gêmeos</option>
+            <option value="touro">Touro</option>
+            <option value="libra">Libra</option>
+        </select>
+        <div class="box">
+            <div class="img">
+                <img src="https://img.freepik.com/premium-photo/colorful-abstract-background-with-lots-different-colored-shapes-colors-it-generative-ai_97167-9340.jpg?w=2000"
+                    alt="" id="image">
+            </div>
+            <div class="show-info">
+                <h1 id="signo_h1">Informação</h1>
+                <p id="informacao">Sem informaçãoes no momento...</p>
+            </div>
+            
+        </div>
+    </main>
+    <script src="geral/menu.js"></script>
+    <script src="js_pages/signo.js"></script>
+    <script src="geral/pesquisa.js"></script>
+      
+    <footer>
+        <form action="">
+            <h1>Formulário de contato : </h1>
+            <label for="email">Digite seu e-mail :</label>
+            <input type="email" name="email" id="email">
+            <label for="texto">Digite seu texto :</label>
+            <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar">
+        </form>
+        
+        <section class="contato">
+            <div class="filho">
+                <h1 id="logo">Mateus</h1>
+                <p>Página  desenvolvida por Mateus Dorvis&reg;&copy;</p>
+                <div class="redes_sociais">
+                    <a href=""><i class="fa-brands fa-linkedin x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-square-github x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram x fa-2xl"></i></a>
+                    <a href="https://wa.me/5551981960014?text=Olá%2C%20gostaria%20de%20mais%20informações%21" target="_blank"><i class="fa-brands fa-whatsapp x fa-2xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="filho2">
+                <p>Compartilhar página via: </p>
+                <div>
+                    <a class="compartilhar" id="share">
+                        <i class="fa-solid fa-share x fa-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com" target="_blank">
+                        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Compartilhar no Facebook" style="width:40px;height:40px;">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Confira este site incrível: https://seusite.com" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Compartilhar no WhatsApp" style="width:40px;height:40px;">
+                    </a>
+                    <a id="copyButton" href="#"><i class="fa-regular fa-copy x fa-2xl"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById('copyButton').onclick = function(event) {
+            event.preventDefault(); // Impede a ação padrão do link
+
+            // Cria um campo de texto temporário
+            const input = document.createElement('input');
+            input.value = window.location.href; // Define o valor como o link da página
+            document.body.appendChild(input); // Adiciona o campo ao DOM
+
+            // Seleciona o texto do campo
+            input.select();
+            input.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+            // Copia o texto selecionado para a área de transferência
+            document.execCommand('copy');
+
+            // Remove o campo do DOM
+            document.body.removeChild(input);
+
+            // Alerta o usuário
+            alert('Link copiado para a área de transferência: ' + input.value);
+        };
+    </script>
+</body>
+
+</html>

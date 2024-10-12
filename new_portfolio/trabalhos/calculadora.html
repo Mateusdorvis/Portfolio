@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="img/logo.png">
+    <meta property="og:title" content="Calculadora" />
+    <meta property="og:description" content="Site de calculadora desenvolvido por Mateus Dorvis" />
+    <meta property="og:image" content="https://seusite.com/imagem_de_compartilhamento.png" />
+    <meta property="og:url" content="https://seusite.com" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/calculadora.css">
+    <link rel="stylesheet" href="geral/menu-footer.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::calculadora::</title>
+</head>
+
+<body>
+
+    <header class="menu-lateral" id="menu-lateral">
+
+        <aside class="lateral">
+            <div class="menu" id="menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="navegacao" id="navegacao">
+                <div>
+                    <p>Consulte outras páginas também :</p>
+                    <input type="search" name="site" id="site">
+
+                    <ol id="lista"></ol>
+                </div>
+                <div class="dark-mode" id="dark">
+                    <div id="filho-dark"><i class="fa-solid fa-moon fa-2xl" id="lua"></i></div>
+                </div>
+            </nav>
+        </aside>
+    </header>
+    
+    <h1>Calculadora</h1>
+    
+    <main class="divmain">
+        <div id="calculator">
+            <input type="text" id="display" disabled>
+            <br>
+            <button id="ac" class="operator"> AC</button>
+            <button id="de" class="operator"> BKSP</button>
+            <button id="." class="operator"> . </button>
+            <button id="/" class="operator"> /</button>
+            <br>
+
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="*" class="operator"> X</button>
+            <br>
+
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="-" class="operator"> -</button>
+            <br>
+
+            <button id="3">3</button>
+            <button id="2">2</button>
+            <button id="1">1</button>
+            <button id="+" class="operator"> +</button>
+            <br>
+
+            <button id="00">00</button>
+            <button id="0">0</button>
+            <button id="=" class="operator equal"> =</button>
+            <br>
+
+        </div>
+    </main>
+    
+    <script src="js_pages/calculadora.js"></script>
+    <script src="geral/menu.js"></script>
+    <script src="geral/pesquisa.js"></script>
+    
+    <footer>
+        <form action="">
+            <h1>Formulário de contato : </h1>
+            <label for="email">Digite seu e-mail :</label>
+            <input type="email" name="email" id="email">
+            <label for="texto">Digite seu texto :</label>
+            <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar">
+        </form>
+        
+        <section class="contato">
+            <div class="filho">
+                <h1 id="logo">Mateus</h1>
+                <p>Página  desenvolvida por Mateus Dorvis&reg;&copy;</p>
+                <div class="redes_sociais">
+                    <a href=""><i class="fa-brands fa-linkedin x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-square-github x fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram x fa-2xl"></i></a>
+                    <a href="https://wa.me/5551981960014?text=Olá%2C%20gostaria%20de%20mais%20informações%21" target="_blank"><i class="fa-brands fa-whatsapp x fa-2xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="filho2">
+                <p>Compartilhar página via: </p>
+                <div>
+                    <a class="compartilhar" id="share">
+                        <i class="fa-solid fa-share x fa-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com" target="_blank">
+                        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Compartilhar no Facebook" style="width:40px;height:40px;">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Confira este site incrível: https://seusite.com" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Compartilhar no WhatsApp" style="width:40px;height:40px;">
+                    </a>
+                    <a id="copyButton" href="#"><i class="fa-regular fa-copy x fa-2xl"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById('copyButton').onclick = function(event) {
+            event.preventDefault(); // Impede a ação padrão do link
+
+            // Cria um campo de texto temporário
+            const input = document.createElement('input');
+            input.value = window.location.href; // Define o valor como o link da página
+            document.body.appendChild(input); // Adiciona o campo ao DOM
+
+            // Seleciona o texto do campo
+            input.select();
+            input.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+            // Copia o texto selecionado para a área de transferência
+            document.execCommand('copy');
+
+            // Remove o campo do DOM
+            document.body.removeChild(input);
+
+            // Alerta o usuário
+            alert('Link copiado para a área de transferência: ' + input.value);
+        };
+    </script>
+</body>
+
+</html>

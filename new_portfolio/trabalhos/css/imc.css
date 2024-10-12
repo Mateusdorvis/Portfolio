@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100vw;
+}
+.indicador{
+    width: 100px;
+    height: 10px;
+    border-left: 100px solid rgb(0, 0, 0);
+}
+.principal{
+    max-width: 1200px;
+    margin: 10% auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #bbe447;
+    padding: 20px;
+    border-radius: 40px;
+    color: black;
+   
+    
+}
+button{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    margin: 2px auto;
+    background-color: #041390;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: .3s;
+    border: 0px;
+}
+button:hover{
+    background-color: black;
+}
+.result{
+    display: flex;
+}
+label, input{
+    display: block;
+    margin: 5px;
+}
+.sessoes{
+    width: 100px;
+    height: 50px;
+    color: white;
+    padding: 4px;
+}
+h1{
+    text-align: center;
+}
+@media screen and (max-width:767px){
+    .principal{
+       display: flex;
+       flex-direction: column;
+       gap: 30px;
+       border-radius: 0px;
+    }
+}
