@@ -137,17 +137,16 @@ textarea {
 
 .contato{
     background-color: #222222;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    
-    
+    padding: 12px;
+    display: block;
+    position: relative;
 }
-.redes_sociais{
+.redes_sociais, .filho2 >div{
+   display: flex;
+   gap: 20px;
    margin: 20px;
+   align-items: center;
 }
-
-
 
 #logo {
     font-size: 30px;
@@ -159,13 +158,6 @@ li{
 #lista a{
     color: white;
     text-decoration: none;
-   
-}
-.filho2>div{
-    display: flex;
-    gap: 20px;
-    margin: 30px;
-    align-items: center;
 }
 #lista li{
     margin: 5px;
@@ -175,14 +167,12 @@ li{
         display: block;
     }
     /*footer*/
-    .redes_sociais{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-      
-    }
-    .contato{
-        height: 400px;
-    }
+  .redes_sociais, .filho2>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: center;
+  }
     /*menu*/
     .lateral{
         display: flex;
