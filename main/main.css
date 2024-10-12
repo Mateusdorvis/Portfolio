@@ -254,6 +254,7 @@ textarea {
        display: grid;
        grid-template-rows: repeat(14,1fr);
        gap: 30px;
+       
     }
     .projetos{
         opacity: 1;
