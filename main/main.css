@@ -249,9 +249,12 @@ textarea {
     transform: rotateY(180deg);
 }
 @media  screen and (min-width: 320px) and (max-width: 767px) {
-   
-    .card-box, .box-projects {
-     display: flex;
+    .box-projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-box{
+        display: block;
     }
     .projetos{
         opacity: 1;
