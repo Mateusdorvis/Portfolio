@@ -51,9 +51,3 @@ img{
     filter: sepia(0%);
     cursor: pointer;
 }
-@media screen  and (max-width: 767px){
-    #pngImg{
-        width: 100px;
-        height: 100px;
-    }
-}
