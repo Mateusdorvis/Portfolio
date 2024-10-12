@@ -1,5 +1,5 @@
 let links = [
-    '../main.html',
+    '../index.html',
     'parallax.html',
     'flex_grid.html',
     'carrossel.html',
