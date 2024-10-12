@@ -256,6 +256,9 @@ textarea {
     .card-box{
         display: block;
     }
+    .card>section{
+        margin-bottom: 60px;
+    }
     .projetos{
         opacity: 1;
     }
