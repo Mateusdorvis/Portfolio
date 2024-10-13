@@ -74,38 +74,59 @@
             <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
             <input type="submit" value="enviar">
         </form>
-        
+
         <section class="contato">
             <div class="filho">
                 <h1 id="logo">Mateus</h1>
-                <p>Página  desenvolvida por Mateus Dorvis&reg;&copy;</p>
+                <p>Página desenvolvida por Mateus Dorvis&reg;&copy;</p>
                 <div class="redes_sociais">
-                    <a href=""><i class="fa-brands fa-linkedin x fa-2xl"></i></a>
-                    <a href=""><i class="fa-brands fa-square-github x fa-2xl"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram x fa-2xl"></i></a>
-                    <a href="https://wa.me/5551981960014?text=Olá%2C%20gostaria%20de%20mais%20informações%21" target="_blank"><i class="fa-brands fa-whatsapp x fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/"><i
+                            class="fa-brands fa-linkedin x fa-2xl"></i></a>
+                    <a href="https://github.com/Mateusdorvis"><i class="fa-brands fa-square-github x fa-2xl"></i></a>
+                    <a href="https://www.instagram.com/m146677"><i class="fa-brands fa-instagram x fa-2xl"></i></a>
+                    <a href="https://wa.me/5551981960014?text=Olá%2C%20gostaria%20de%20mais%20informações%21"
+                        target="_blank"><i class="fa-brands fa-whatsapp x fa-2xl"></i></a>
                 </div>
             </div>
-            
+
             <div class="filho2">
-                <p>Compartilhar página via: </p>
+                <p>Compartilhe esta página : </p>
                 <div>
                     <a class="compartilhar" id="share">
                         <i class="fa-solid fa-share x fa-2xl"></i>
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mateusdorvis.github.io/Portfolio/trabalhos/imc.html" target="_blank">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mateusdorvis.github.io/Portfolio/"
+                        target="_blank">
                         <i class="fa-brands fa-facebook x fa-2xl"></i>
                     </a>
-                    <a href="https://api.whatsapp.com/send?text=Confira este site incrível: https://mateusdorvis.github.io/Portfolio/trabalhos/imc.html" target="_blank">
+                    <a href="https://api.whatsapp.com/send?text=Confira este site incrível: https://mateusdorvis.github.io/Portfolio/"
+                        target="_blank">
                         <i class="fa-brands fa-whatsapp x fa-2xl"></i>
                     </a>
+                    <a id="copyButton" href="#"><i class="fa-regular fa-copy x fa-2xl"></i></a>
                 </div>
             </div>
         </section>
     </footer>
 
     <script>
-        document.getElementById('copyButton').onclick = function(event) {
+        document.getElementById('share').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title, // Título da página
+                    text: 'Confira este site incrível!', // Texto de pré-visualização
+                    url: window.location.href // URL da página
+                })
+                    .then(() => console.log('Página compartilhada com sucesso!'))
+                    .catch(err => console.error('Erro ao compartilhar:', err));
+            } else {
+                alert('A funcionalidade de compartilhamento não está disponível no seu navegador.');
+            }
+        });
+
+        document.getElementById('copyButton').onclick = function (event) {
             event.preventDefault(); // Impede a ação padrão do link
 
             // Cria um campo de texto temporário

@@ -37,18 +37,3 @@ dark.addEventListener('click', function () {
     falso = !falso;
 });
 
-document.getElementById('share').addEventListener('click', () => {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Meu portfólio',
-            text: 'Página de portfólio desenvolvida por Mateus Dorvis',
-            url: window.location.href
-        }).then(() => {
-            console.log('Conteúdo compartilhado com sucesso!');
-        }).catch((error) => {
-            console.error('Erro ao compartilhar:', error);
-        });
-    } else {
-        console.log('A API de compartilhamento não é suportada neste navegador.');
-    }
-});
