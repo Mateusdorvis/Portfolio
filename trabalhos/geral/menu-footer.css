@@ -37,9 +37,6 @@
     grid-template-columns: repeat(2,1fr);
     gap: 3px;
 }
-#share{
-    display: none;
-}
 
 .body {
     background-color: #121212;
@@ -154,9 +151,7 @@ li{
     margin: 5px;
 }
 @media screen and (min-width: 200px) and (max-width: 767px){
-    #share{
-        display: block;
-    }
+   
     /*footer*/
   /*.redes_sociais, .filho2>div{
     display: grid;
