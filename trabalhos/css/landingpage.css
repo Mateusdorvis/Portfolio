@@ -93,9 +93,9 @@ img{
     .box{
        display: flex;
        flex-direction: column;
-       margin: 30px;
-       padding-bottom: 50px;
-
+    }
+    .conteudo{
+        padding: 20px;
     }
     
 }
@@ -103,11 +103,10 @@ img{
     .box h1{
         font-size: 3rem;
     }
-    .box{
-        margin: 30px;
-    }
+    
     .conteudo{
         height: 150vh;
+        padding: 40px;
     }
     
 }
