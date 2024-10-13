@@ -61,8 +61,7 @@ button:hover{
     .box{
         display: flex;
         flex-direction: column;
-        margin: 0 50px;
+        padding: 50px;
         height: auto;
-        padding-bottom: 60px ;
     }
 }
