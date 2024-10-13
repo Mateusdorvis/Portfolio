@@ -244,7 +244,7 @@ textarea {
     
 }
 .card-info a{
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 700;
     transition:  .4s;
 }
