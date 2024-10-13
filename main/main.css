@@ -254,6 +254,7 @@ textarea {
 .card-info a:visited{
     color: rgb(47, 93, 219);
 }
+
 /*efeito de quando o user clica gira o card  */
 .card.girar .figura{
     transform: rotateY(180deg);
