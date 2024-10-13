@@ -246,6 +246,13 @@ textarea {
 .card-info a{
     color: white;
     font-weight: 700;
+    transition:  .4s;
+}
+.card-info a:hover{
+    color: rgb(255, 49, 49);
+}
+.card-info a:visited{
+    color: rgb(130, 29, 197);
 }
 /*efeito de quando o user clica gira o card  */
 .card.girar .figura{
