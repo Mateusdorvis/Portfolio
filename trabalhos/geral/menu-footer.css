@@ -148,18 +148,15 @@ li{
     color: white;
     text-decoration: none;
 }
+#share{
+    display: block;
+}
 #lista li{
     margin: 5px;
 }
 @media screen and (min-width: 200px) and (max-width: 767px){
    
-    /*footer*/
-  /*.redes_sociais, .filho2>div{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-    align-items: center;
-  }*/
+   
     /*menu*/
     .lateral{
         display: flex;
