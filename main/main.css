@@ -243,7 +243,10 @@ textarea {
     padding: 40px;
     
 }
-
+.card-info a{
+    color: white;
+    font-weight: 700;
+}
 /*efeito de quando o user clica gira o card  */
 .card.girar .figura{
     transform: rotateY(180deg);
