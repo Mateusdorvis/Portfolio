@@ -144,17 +144,17 @@ textarea {
 li{
     list-style-type: none;
 }
-#lista a{
-    color: white;
+.card-info a{
     text-decoration: none;
+    color: rgb(0, 0, 0);
     font-weight: 700;
-    transition: .4s;
+    transition:  .4s;
 }
-#lista a:hover{
-    color: rgb(255, 49, 49);
+.card-info a:hover{
+    color: rgb(103, 78, 216);
 }
-#lista a:visited{
-    color: rgb(130, 29, 197);
+.card-info a:visited{
+    color: rgb(47, 93, 219);
 }
 #share{
     display: block;
