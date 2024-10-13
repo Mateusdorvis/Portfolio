@@ -32,6 +32,7 @@
     z-index: 1000;
     border-radius: 0%;
 }
+
 .menu_style .navegacao{
     display: grid;
     grid-template-columns: repeat(2,1fr);
